@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Delete Vehicules'
+User.destroy_all
+Vehicule.destroy_all
+
+puts 'Create the seed'
+Vehicule.create!(title: "catapulte")
+Vehicule.create!(title: "fusée")
+Vehicule.create!(title: "catapulte")
+
+
+User.create!(name: "Mumu")
+User.create!(name: "Gin tonic")
+User.create!(name: "Whisky coca")
+User.create!(name: "Calimoxo")
+
+
+
+
