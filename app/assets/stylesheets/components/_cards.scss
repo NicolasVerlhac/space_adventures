@@ -38,15 +38,6 @@
   filter: grayscale(1);
 }
 
-// .card-product {
-//   overflow: hidden;
-//   height: 200px;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   align-items: center;
-// }
-
 .card-product-infos {
   height: 180px;
   border-radius: 5px;
@@ -65,4 +56,63 @@
   font-size: 25px;
   margin: 0;
 }
+
+/////// CARD TRIP ////////
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.card-trip > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding :10px 10px 5px;
+}
+
+.card-trip p {
+  font-size: 12px;
+  padding: 5px 10px 5px;
+  margin-bottom: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.column-cards {
+grid-template-columns: 1fr 1fr;
+flex-grow: 1;
+display: grid;
+}
+
+#map{
+  display:block;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
 
