@@ -1,2 +1,45 @@
-<h1>Vehicules#show</h1>
-<p>Find me in app/views/vehicules/show.html.erb</p>
+
+<div class="container m-3">
+  <div class="row">
+    <div class="col-sm-12">
+
+<div class="card-trip">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/71xmlfDPaXL._SX425_.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @vehicule.title %></h2>
+      <h2>Description : <%= @vehicule.description %></h2>
+      <h2>Capacité : <%= @vehicule.capacity %> personnes</h2>
+      <h2>Localisation : <%= @vehicule.address %> - <%= @vehicule.city %> - <%= @vehicule.country %></h2>
+      <h2>Permis nécessaire ?<% if @vehicule.permit %>
+        oui
+        <% else %>
+        non
+        <% end %>
+      </h2>
+      <h2>Véhicule disponible ? <% if @vehicule.availability %>
+        oui
+        <% else %>
+        non
+        <% end %>
+      </h2>
+    </div>
+    <h2 class="card-trip-pricing"><%= @vehicule.daily_price %> €</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <div class="col-sm-12">
+      <%= link_to 'Come back to the list', vehicules_path(@vehicules) %><br>
+  </div>
+</div>
+
