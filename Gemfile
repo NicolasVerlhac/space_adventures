@@ -3,6 +3,7 @@ ruby '2.6.3'
 
 gem 'bootsnap', require: false
 gem 'country_select'
+gem 'cloudinary', '~> 1.12.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
