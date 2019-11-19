@@ -1,2 +1,58 @@
-<h1>Vehicules#index</h1>
-<p>Find me in app/views/vehicules/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script> -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+  </head>
+  <body>
+
+    <div class="container">
+  <h1 class="text-center">Trouvez votre moyen d'explorer la galaxie</h1>
+  <br>
+  <br>
+
+ <div class="row">
+    <% @vehicules.each do |vehicule| %>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="width: 18rem;">
+<!--           <img class="card-img-top" src="..." alt="Card image cap">
+ -->        <div class="card-body">
+          <h2 class="card-title"><%= vehicule.title %></h2>
+          <p class="card-text"><%= vehicule.description %></p>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+    <!-- TODO: Put your HTML code in here -->
+    <form id="form" action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="name">Type an adress</label>
+        <input type="text" name="name" id="address" required>
+      </div>
+      <div class="form-example">
+        <input type="submit" value="Geocode!">
+      </div>
+    </form>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+
+  <script src='main.js'></script>
+</body>
+</html>
