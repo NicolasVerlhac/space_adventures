@@ -1,5 +1,7 @@
 class Vehicule < ApplicationRecord
   belongs_to :user
+  has_many :bookings
+
   validates :title, presence: true
   validates :description, presence: true
   validates :category, presence: true, inclusion: { in: ["JetPack", "Catapulte", "X-wing","Fusée", "Soucoupe", "Canon"]}
@@ -10,5 +12,4 @@ class Vehicule < ApplicationRecord
   validates :daily_price, presence: true
   validates :permit, presence: true
   validates :availability, presence: true
-
 end
