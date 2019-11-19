@@ -10,9 +10,17 @@ class VehiculesController < ApplicationController
   end
 
   def new
+    @vehicule = Vehicule.new
   end
 
   def create
+    @vehicule = Vehicule.new(vehicule_params)
+    @vehicule.user = current_user
+    if @vehicule.save
+      redirect_to vehicule_path(@vehicule)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,6 +32,9 @@ class VehiculesController < ApplicationController
   def destroy
   end
 
-  def params_vehicule
+  def vehicule_params
+    params
+    .require(:vehicule)
+    .permit(:title, :user_id, :description, :photo, :category, :capacity, :country, :city, :address, :daily_price, :permit, :availability)
   end
 end
