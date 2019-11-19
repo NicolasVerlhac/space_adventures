@@ -4,7 +4,9 @@ class VehiculesController < ApplicationController
   end
 
   def show
-    @vehicule = Vehicule.find_by(params[:id])
+    # @vehicule = Vehicule.find_by(id: params[:id])
+    # @vehicule = Vehicule.where(id: params[:id])
+    @vehicule = Vehicule.find_by_id(params[:id])
   end
 
   def new
