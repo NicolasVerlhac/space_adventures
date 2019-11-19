@@ -1,5 +1,6 @@
 class Vehicule < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   has_one_attached :photo
 
   validates :title, presence: true
@@ -12,5 +13,4 @@ class Vehicule < ApplicationRecord
   validates :daily_price, presence: true
   validates :permit, presence: true
   validates :availability, presence: true
-
 end
