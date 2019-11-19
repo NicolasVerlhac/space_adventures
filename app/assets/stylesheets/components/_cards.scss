@@ -18,3 +18,51 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.cards-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 40px;
+}
+
+.card-category-2 {
+  background-size: cover;
+  background-position: center;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: grayscale(1);
+}
+
+// .card-product {
+//   overflow: hidden;
+//   height: 200px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 16px;
+//   align-items: center;
+// }
+
+.card-product-infos {
+  height: 180px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin: 10px;
+  text-align: center;
+}
+
+.card-product-infos img {
+  height: 120px;
+  width: 120px;
+  padding: 15px;
+}
+
+.card-product h3{
+  font-size: 25px;
+  margin: 0;
+}
+
