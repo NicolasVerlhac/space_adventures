@@ -7,19 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Delete Vehicules'
-User.destroy_all
 Vehicule.destroy_all
-
+User.destroy_all
 puts 'Create the seed'
-Vehicule.create!(title: "catapulte")
-Vehicule.create!(title: "fusée")
-Vehicule.create!(title: "catapulte")
 
 
-User.create!(name: "Mumu")
-User.create!(name: "Gin tonic")
-User.create!(name: "Whisky coca")
-User.create!(name: "Calimoxo")
+User.create!(email: "mumu3@gmail.com", password: "xxxxxxx", first_name: "Mumu", last_name: "Oger", phone: "01345677")
+User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", last_name: "Toto", phone: "01345788")
+
+puts 'Create the seed2'
+
+User.first.vehicules.create!(title: "Super Catapulte géante", description: "le top du top", category: "Catapulte", capacity: 100, country: "USA", city: "Los Angeles", address: "Alabama Street", daily_price: 1000000, permit: true, availability: true)
+User.first.vehicules.create!(title: "Mortel JetPack", description: "great", category: "JetPack", capacity: 200, country: "Australie", city: "Los Angeles", address: "Alabama Street", daily_price: 2000000, permit: true, availability: true)
+User.first.vehicules.create!(title: "W-wing de ouf", description: "gorgeous", category: "X-wing", capacity: 300, country: "China", city: "Los Angeles", address: "Alabama Street", daily_price: 3, permit: true, availability: true)
+User.last.vehicules.create!(title: "Fusée Ariane", description: "fabulous", category: "Fusée", capacity: 400, country: "Japon", city: "Los Angeles", address: "Alabama Street", daily_price: 55.67, permit: true, availability: true)
+User.last.vehicules.create!(title: "Soucoupe volante pour voyager avec nos amis les ovnis", description: "omg", category: "Soucoupe", capacity: 500, country: "Italy", city: "Los Angeles", address: "Alabama Street", daily_price: 100, permit: true, availability: true)
+User.last.vehicules.create!(title: "Expérience unique en canon", description: "beautiful", category: "Canon", capacity: 600, country: "France", city: "Los Angeles", address: "Alabama Street", daily_price: 1000000000, permit: true, availability: true)
+
+
+puts 'Create the seed4'
+
+
 
 
 
