@@ -1,5 +1,7 @@
 class Vehicule < ApplicationRecord
   belongs_to :user
+  has_many_attached :photos
+
   validates :title, presence: true
   validates :description, presence: true
   validates :category, presence: true, inclusion: { in: ["JetPack", "Catapulte", "X-wing","Fusée", "Soucoupe", "Canon"]}
