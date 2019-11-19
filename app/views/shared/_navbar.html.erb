@@ -1,3 +1,6 @@
+
+
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
     <img src="https://www.clipartwiki.com/clipimg/full/7-75674_transparent-background-spaceship-clip-art-rocket-picto-startup.png" />
@@ -5,15 +8,20 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Publier une annonce</a>
+        <a class="nav-link" href="/vehicules/new">Publier une annonce</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Se connecter</a>
+        <% if @user = current_user %>
+
+        <%= link_to "button", destroy_user_session_path, method: :delete %>
+
+
+        <% else  %>
+        <a class="nav-link" href="/users/sign_in">Se connecter</a>
+        <% end %>
       </li>
     </ul>
   </div>
