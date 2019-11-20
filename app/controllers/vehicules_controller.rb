@@ -1,6 +1,12 @@
 class VehiculesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @vehicules = Vehicule.geocoded
+    @vehicules = policy_scope(Vehicule).order(created_at: :desc)
+
+    if params[:query].present?
+      @vehicules = @vehicules.where(category: params[:query])
+    end
 
     @markers = @vehicules.map do |vehicule|
       {
@@ -14,14 +20,17 @@ class VehiculesController < ApplicationController
     # @vehicule = Vehicule.find_by(id: params[:id])
     # @vehicule = Vehicule.where(id: params[:id])
     @vehicule = Vehicule.find_by_id(params[:id])
+    authorize(@vehicule)
   end
 
   def new
     @vehicule = Vehicule.new
+    authorize(@vehicule)
   end
 
   def create
     @vehicule = Vehicule.new(vehicule_params)
+    authorize(@vehicule)
     @vehicule.user = current_user
     if @vehicule.save
       redirect_to vehicule_path(@vehicule)
@@ -31,9 +40,14 @@ class VehiculesController < ApplicationController
   end
 
   def edit
+    @vehicule = Vehicule.find(params[:id])
+    authorize(@vehicule)
   end
 
   def update
+    @vehicule = Vehicule.find(params[:id])
+    @vehicule.update(vehicule_params)
+    redirect_to vehicule_path(@vehicule)
   end
 
   def destroy
