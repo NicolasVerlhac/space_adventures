@@ -19,6 +19,12 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.container1 {
+  flex-direction: row;
+}
+
+
+
 .search-form-control {
   position: relative;
 }
@@ -44,4 +50,16 @@
 
 h2 {
   padding : 40px;
+}
+
+.button1 {
+  margin-top: 30px;
+}
+
+.dropdown {
+  height: 38px;
+}
+
+.container2 {
+  margin-left: 0;
 }

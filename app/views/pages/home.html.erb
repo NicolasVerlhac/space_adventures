@@ -2,14 +2,44 @@
   <div class="container col-11">
     <h1>Space Adventures : voyages dans l'espace à petits prix !</h1>
     <p>Découvrez nos fusées tendances du moment.</p>
-    <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    </form>
+
+
+    <div class="container2">
+      <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <div class="row">
+          <div class="col-sm">
+            <label class="text-white" for="lieu">Où </label>
+            <input class="form-control string required" type="text" name="search[query]" value="Adresse" id="search_query" />
+          </div>
+          <div>
+            <label class="text-white" for="pet-select">Type d'engin</label>
+            <select class="dropdown1 col-sm" name="category" id="category-select">
+                <option value="">Choisis ton véhicule</option>
+                <option value="dog">JetPack</option>
+                <option value="cat">Catapulte</option>
+                <option value="hamster">X-Wing</option>
+                <option value="parrot">Fusée</option>
+                <option value="spider">Soucoupe</option>
+                <option value="goldfish">Canon</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <label class="text-white" for="date">Date de début </label>
+            <input class="form-control" type="date" value="2011-08-19" name="search[query]" id="search_query" />
+          </div>
+          <div class="col-sm">
+            <label class="text-white" for="date">Date de fin </label>
+            <input class="form-control" type="date" value="2011-08-19" name="search[query]" id="search_query" />
+          </div>
+          <div>
+            <button name="button" type="submit" class=" button1 btn btn-flat">
+              <i class="fas fa-search"></i> Rechercher
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
   </div>
 </div>
 

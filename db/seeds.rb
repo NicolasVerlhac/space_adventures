@@ -26,9 +26,3 @@ User.last.vehicules.create!(title: "Expérience unique en canon", description: "
 
 
 puts 'Create the seed4'
-
-
-
-
-
-
