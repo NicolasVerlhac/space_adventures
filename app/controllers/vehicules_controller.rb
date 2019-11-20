@@ -3,10 +3,16 @@ class VehiculesController < ApplicationController
 
   def index
     @vehicules = policy_scope(Vehicule).order(created_at: :desc)
+
     if params[:query].present?
-      @vehicules = Vehicule.where(category: params[:query])
-    else
-      @vehicules = Vehicule.all
+      @vehicules = @vehicules.where(category: params[:query])
+    end
+
+    @markers = @vehicules.map do |vehicule|
+      {
+        "lat" => vehicule.latitude,
+        "lng" => vehicule.longitude
+      }
     end
   end
 

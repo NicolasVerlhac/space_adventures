@@ -21,7 +21,7 @@
       <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" />
       <div class="card-trip-infos">
         <div>
-          <h2><%= vehicule.title %></h2>
+          <h2><%= link_to vehicule.title, vehicule_path(vehicule) %></h2>
           <p><%= vehicule.description %></p>
           <p> A partir de <strong><%=vehicule.daily_price%>€</strong></p>
         </div>
@@ -31,7 +31,7 @@
     <% end %>
   </div>
     <div class='column'>
-      <div id='map' style='width: 400px;'></div>
+      <div id='map' style='width: 400px;' data-markers='<%= @markers.to_json %>'></div>
   </div>
 </div>
 </div>
@@ -41,6 +41,5 @@
     <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-  <script src='main.js'></script>
 </body>
 </html>
