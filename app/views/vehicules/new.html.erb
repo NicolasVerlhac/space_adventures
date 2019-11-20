@@ -5,7 +5,7 @@
         <h1>Publiez votre annonce</h1><br>
         <%= simple_form_for @vehicule do |f| %>
         <% config.input_mappings = { /country/ => :string }  %>
-        <%= f.input :title, label: 'Titre de votre annonce', input_html: { value: "test" } %>
+        <%= f.input :title, label: 'Titre de votre annonce' %>
         <%= f.input :description, label: 'Description de votre véhicule' %>
         <%= f.input :category, label: 'Catégorie de véhicule', collection: [ "JetPack", "Catapulte", "X-wing", "Fusée", "Soucoupe", "Canon"] %>
         <%= f.input :capacity, label: 'Capacité' %>
