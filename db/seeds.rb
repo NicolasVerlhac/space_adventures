@@ -17,10 +17,10 @@ User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", 
 
 puts 'Create the seed2'
 
+User.first.vehicules.create!(title: "Fusée Ariane", description: "Lanceur dit à deux étage et demi car il se compose d'un étage principal accolé par deux boosters.", category: "Fusée", capacity: 8, country: "France", city: "Reims", address: "10 rue de mars", daily_price: 8000.00, permit: true, availability: true)
 User.first.vehicules.create!(title: "Super Catapulte géante", description: "le top du top", category: "Catapulte", capacity: 100, country: "France", city: "Paris", address: "23 rue du tage", daily_price: 1000000, permit: true, availability: true)
 User.first.vehicules.create!(title: "Mortel JetPack", description: "great", category: "JetPack", capacity: 200, country: "France", city: "Paris", address: "90 rue de charonne", daily_price: 2000000, permit: true, availability: true)
 User.first.vehicules.create!(title: "W-wing de ouf", description: "gorgeous", category: "X-wing", capacity: 300, country: "France", city: "Versailles", address: "3 rue de montreuil", daily_price: 3, permit: true, availability: true)
-User.last.vehicules.create!(title: "Fusée Ariane", description: "fabulous", category: "Fusée", capacity: 400, country: "France", city: "Reims", address: "10 rue de mars", daily_price: 55.67, permit: true, availability: true)
 User.last.vehicules.create!(title: "Soucoupe volante pour voyager avec nos amis les ovnis", description: "omg", category: "Soucoupe", capacity: 500, country: "France", city: "Evry", address: "1 Rue Ambroise Croizat", daily_price: 100, permit: true, availability: true)
 User.last.vehicules.create!(title: "Expérience unique en canon", description: "beautiful", category: "Canon", capacity: 600, country: "France", city: "Paris", address: "28 rue monge", daily_price: 1000000000, permit: true, availability: true)
 

@@ -115,4 +115,54 @@ display: grid;
   top: 0;
 }
 
+/////// CARD TRIP SHOW ////////
+
+.card-trip-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.card-trip-show > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip-user-show {
+  position: absolute;
+  right: 1000px;
+  top: 356px;
+  width: 75px;
+}
+
+.card-trip-infos-show h2 {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.card-trip-infos-show h3 {
+  font-size: 1.25rem;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
