@@ -12,26 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_11_19_161423) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bookings", force: :cascade do |t|
-    t.bigint "vehicule_id"
-    t.bigint "user_id"
-    t.date "start_date"
-    t.date "end_date"
-    t.string "status"
-    t.text "owner_review"
-    t.integer "owner_rating"
-    t.text "renter_review"
-    t.integer "renter_rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_bookings_on_user_id"
-    t.index ["vehicule_id"], name: "index_bookings_on_vehicule_id"
-
-    create_table "active_storage_attachments", force: :cascade do |t|
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -50,6 +34,22 @@ ActiveRecord::Schema.define(version: 2019_11_19_161423) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "vehicule_id"
+    t.bigint "user_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "status"
+    t.text "owner_review"
+    t.integer "owner_rating"
+    t.text "renter_review"
+    t.integer "renter_rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["vehicule_id"], name: "index_bookings_on_vehicule_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(version: 2019_11_19_161423) do
     t.index ["user_id"], name: "index_vehicules_on_user_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "bookings", "vehicules"
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "vehicules", "users"
 end
