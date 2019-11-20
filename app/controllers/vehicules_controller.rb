@@ -1,7 +1,10 @@
 class VehiculesController < ApplicationController
   def index
-    # @vehicules = Vehicule.all
-    @vehicules = Vehicule.where(category: params[:query])
+    if params[:query].present?
+      @vehicules = Vehicule.where(category: params[:query])
+    else
+      @vehicules = Vehicule.all
+    end
   end
 
   def show
