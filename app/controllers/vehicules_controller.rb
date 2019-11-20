@@ -34,9 +34,14 @@ class VehiculesController < ApplicationController
   end
 
   def edit
+    @vehicule = Vehicule.find(params[:id])
+    authorize(@vehicule)
   end
 
   def update
+    @vehicule = Vehicule.find(params[:id])
+    @vehicule.update(vehicule_params)
+    redirect_to vehicule_path(@vehicule)
   end
 
   def destroy
