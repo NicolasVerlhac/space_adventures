@@ -4,7 +4,7 @@
       <div>
         <%= simple_form_for @vehicule do |f| %>
         <% config.input_mappings = { /country/ => :string }  %>
-        <%= f.input :title, label: 'Titre de votre annonce' %>
+        <%= f.input :title, label: 'Titre de votre annonce', input_html: { value: "test" } %>
         <%= f.input :description, label: 'Description de votre véhicule' %>
         <%= f.input :category, label: 'Catégorie de véhicule', collection: [ "JetPack", "Catapulte", "X-wing", "Fusée", "Soucoupe", "Canon"] %>
         <%= f.input :capacity, label: 'Capacité' %>
@@ -25,4 +25,7 @@
   </div>
 </div>
 
+<% if policy(Vehicule).create? %>
+  <%= link_to "New vehicule", new_vehicule_path %>
+<% end %>
 

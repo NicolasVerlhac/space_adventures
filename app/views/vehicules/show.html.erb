@@ -4,7 +4,7 @@
     <div class="col-sm-12">
 
 <div class="card-trip">
-  <%= cl_image_tag @vehicule.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @vehicule.photo.key, height: 300, width: 400, crop: :fill if @vehicule.photo? %>
   <div class="card-trip-infos">
     <div>
       <h2><%= @vehicule.title %></h2>

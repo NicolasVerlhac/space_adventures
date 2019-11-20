@@ -1,2 +1,8 @@
 <h1>Vehicules#edit</h1>
 <p>Find me in app/views/vehicules/edit.html.erb</p>
+
+<% @vehicules.each do |vehicule| %>
+  <% if policy(vehicule).edit? %>
+    <%= link_to "Update", edit_vehicule_path(vehicule) %>
+  <% end %>
+<% end %>
