@@ -17,9 +17,8 @@
       <li class="nav-item">
         <% if @user = current_user %>
 
-        <%= link_to "button", destroy_user_session_path, method: :delete %>
-
-
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        <!-- <a class="nav-link" href="/users/sign_in">Se déconnecter</a> -->
         <% else  %>
         <a class="nav-link" href="/users/sign_in">Se connecter</a>
         <% end %>

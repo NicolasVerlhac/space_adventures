@@ -1,7 +1,8 @@
 <div class="container text-center m-3">
   <div class="row">
-    <div class="col-sm-6">
-      <div>
+    <div class="col-sm-6 offset-sm-3">
+      <div class="border p-4" id="border-form">
+        <h1>Publiez votre annonce</h1><br>
         <%= simple_form_for @vehicule do |f| %>
         <% config.input_mappings = { /country/ => :string }  %>
         <%= f.input :title, label: 'Titre de votre annonce' %>
@@ -18,7 +19,8 @@
         <%= f.input :permit, label: 'Permis nécessaire pour piloter le véhicule ?', collection: [ "Oui", "Non"] %>
         <%= f.input :availability, label: 'Véhicule disponible ?', collection: [ "Oui", "Non"] %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit 'Créer mon véhicule'%>
+        <%= f.submit 'Créer mon véhicule', class:"btn btn-flat"%>
+
         <% end %>
       </div>
     </div>
