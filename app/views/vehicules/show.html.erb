@@ -10,7 +10,7 @@
       <div>
         <h2><%= @vehicule.title %></h2>
         <h3><i><%= @vehicule.description %></i></h3>
-        <h3>💸 à partir de <strong><%=@vehicule.daily_price%>€</strong>/jour</h3>
+        <h3>💸 à partir de <strong><%=@vehicule.daily_price.round%>€</strong>/jour</h3>
         <h3>👨‍✈️ équipage max : <%= @vehicule.capacity %> personnes</h3>
         <h3>🗺 <%= @vehicule.address %>, <%= @vehicule.city %>, <%= @vehicule.country %></h3>
         <h3> <% if @vehicule.permit %>

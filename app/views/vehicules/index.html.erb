@@ -16,23 +16,25 @@
   <p class="mb-4">Classement par ordre de pertinence</p>
   <div class='d-flex'>
     <div class='column-cards'>
-    <% @vehicules.each do |vehicule| %>
-      <div class="card-trip">
-        <% if vehicule.photo.attached? %>
-          <%= cl_image_tag vehicule.photo.key, crop: :fill %>
-        <% else %>
-          <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" height="500" width="400" />
-        <% end %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= link_to vehicule.title, vehicule_path(vehicule) %></h2>
-            <p><%= vehicule.description %></p>
-            <p> A partir de <strong><%=vehicule.daily_price.round%>€</strong></p>
+      <% @vehicules.each do |vehicule| %>
+         <%= link_to vehicule_path(vehicule) do %>
+          <div class="card-trip">
+            <% if vehicule.photo.attached? %>
+              <%= cl_image_tag vehicule.photo.key, crop: :fill %>
+            <% else %>
+              <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" height="500" width="400" />
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= vehicule.title %></h2>
+                <p><%= vehicule.description %></p>
+                <p> A partir de <strong><%=vehicule.daily_price.round%>€</strong></p>
+              </div>
+              <img src="https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg" class="card-trip-user avatar-bordered" />
+            </div>
           </div>
-          <img src="https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    <% end %>
+         <% end %>
+       <% end %>
     </div>
     <div class='column'>
       <div id='map' style='width: 400px;' data-markers='<%= @markers.to_json %>'></div>

@@ -26,22 +26,22 @@ puts 'Created the users seed'
 # User.last.vehicules.create!(title: "Expérience unique en canon", description: "beautiful", category: "Canon", capacity: 600, country: "France", city: "Paris", address: "28 rue monge", daily_price: 1000000000, permit: true, availability: true)
 
 file = URI.open('https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
-fusée1 = User.first.vehicules.create!(title: "Ariane 5", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 8, country: "France", city: "Paris", address: "16 rue Duhesme", daily_price: 7000, permit: true, availability: true)
+fusée1 = User.first.vehicules.create!(title: "Ariane 5", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 8, country: "🇫🇷 France", city: "Paris", address: "16 rue Duhesme", daily_price: 7000, permit: true, availability: true)
 fusée1.photo.attach(io: file, filename: 'fusée1.jpg', content_type: 'image/jpg')
 fusée1.save
 
 file2 = URI.open('https://images.unsplash.com/photo-1544942579-9671c890fe89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1172&q=80')
-fusée2 = User.first.vehicules.create!(title: "Saturn V", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 10, country: "France", city: "Paris", address: "16 rue Paradis", daily_price: 9000, permit: true, availability: true)
+fusée2 = User.first.vehicules.create!(title: "Saturn V", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 10, country: "🇺🇸 États-Unis", city: "Houston", address: "2101 E NASA Pkwy", daily_price: 9000, permit: true, availability: true)
 fusée2.photo.attach(io: file2, filename: 'fusée2.jpg', content_type: 'image/jpg')
 fusée2.save
 
 file3 = URI.open('https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80')
-fusée3 = User.first.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "France", city: "Paris", address: "16 rue Saint-maur", daily_price: 10000, permit: true, availability: true)
+fusée3 = User.first.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
 fusée3.photo.attach(io: file3, filename: 'fusée3.jpg', content_type: 'image/jpg')
 fusée3.save
 
-file4 = URI.open('https://images.unsplash.com/photo-1546665105-da1570d1d902?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1152&q=80')
-fusée4 = User.first.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "France", city: "Paris", address: "18 rue simploin", daily_price: 11000, permit: true, availability: true)
+file4 = URI.open('https://images.unsplash.com/photo-1567416661576-659c4298a2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80')
+fusée4 = User.first.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "🇷🇺 Russie", city: "Moscou", address: "Москва, 103073", daily_price: 11000, permit: true, availability: true)
 fusée4.photo.attach(io: file4, filename: 'fusée4.jpg', content_type: 'image/jpg')
 fusée4.save
 
