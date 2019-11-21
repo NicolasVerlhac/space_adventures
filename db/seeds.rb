@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Delete vehicules and users'
-Vehicule.destroy_all
 User.destroy_all
+Vehicule.destroy_all
 puts 'Deleted the users and vehicules seed'
 
 
