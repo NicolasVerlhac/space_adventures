@@ -5,7 +5,14 @@ class VehiculesController < ApplicationController
     @vehicules = policy_scope(Vehicule).order(created_at: :desc)
 
     if params[:query].present?
-      @vehicules = @vehicules.where(category: params[:query])
+
+      sql_query = "category ILIKE :query OR address ILIKE :query OR city ILIKE :query OR country ILIKE :query"
+      @vehicules = Vehicule.where(sql_query, query: "%#{params[:query]}%")
+
+
+
+
+
     end
 
     @markers = @vehicules.map do |vehicule|

@@ -18,6 +18,9 @@ User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", 
 puts 'Create the seed2'
 
 User.first.vehicules.create!(title: "Fusée Ariane", description: "Lanceur dit à deux étage et demi car il se compose d'un étage principal accolé par deux boosters.", category: "Fusée", capacity: 8, country: "France", city: "Reims", address: "10 rue de mars", daily_price: 8000.00, permit: true, availability: true)
+User.first.vehicules.create!(title: "Fusée Bariane", description: "Lanceur dit à trois étages et demi car il se compose d'un étage principal accolé par deux boosters.", category: "Fusée", capacity: 9, country: "Italie", city: "Rome", address: "10 rue de paris", daily_price: 8000.00, permit: true, availability: true)
+User.first.vehicules.create!(title: "Fusée Cariane", description: "Lanceur dit à quatres étages et demi car il se compose d'un étage principal accolé par deux boosters.", category: "Fusée", capacity: 10, country: "Etats Unis", city: "Miami", address: "10 rue de los angeles", daily_price: 8000.00, permit: true, availability: true)
+
 User.first.vehicules.create!(title: "Super Catapulte géante", description: "le top du top", category: "Catapulte", capacity: 100, country: "France", city: "Paris", address: "23 rue du tage", daily_price: 1000000, permit: true, availability: true)
 User.first.vehicules.create!(title: "Mortel JetPack", description: "great", category: "JetPack", capacity: 200, country: "France", city: "Paris", address: "90 rue de charonne", daily_price: 2000000, permit: true, availability: true)
 User.first.vehicules.create!(title: "W-wing de ouf", description: "gorgeous", category: "X-wing", capacity: 300, country: "France", city: "Versailles", address: "3 rue de montreuil", daily_price: 3, permit: true, availability: true)
