@@ -6,15 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 puts 'Delete vehicules and users'
 Booking.destroy_all
 User.destroy_all
 Vehicule.destroy_all
 puts 'Deleted the users and vehicules seed'
 
+tete1 = URI.open('https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg')
+perso1 = User.create!(email: "mumud3@gmail.com", password: "xxxxxxx", first_name: "Mumu", last_name: "Oger", phone: "01345677")
+perso1.photo.attach(io: tete1, filename: 'perso1.jpg', content_type: 'image/jpg')
+perso1.save
 
-User.create!(email: "mumu3@gmail.com", password: "xxxxxxx", first_name: "Mumu", last_name: "Oger", phone: "01345677")
-User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", last_name: "Toto", phone: "01345788")
+tete2 = URI.open('https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+perso2 =User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", last_name: "Toto", phone: "01345788")
+perso2.photo.attach(io: tete2, filename: 'perso2.jpg', content_type: 'image/jpg')
+perso2.save
 
 puts 'Created the users seed'
 
