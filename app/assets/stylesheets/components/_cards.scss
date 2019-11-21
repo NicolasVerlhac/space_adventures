@@ -6,8 +6,9 @@
 
 .card-category {
   background-size: cover;
+  // background-size: contain;
   background-position: center;
-  height: 180px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +18,11 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category a {
+  text-decoration: none;
+  color: white;
 }
 
 .cards-2 {
@@ -39,7 +45,7 @@
 }
 
 .card-product-infos {
-  height: 180px;
+  height: 250px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   margin: 10px;
@@ -47,9 +53,15 @@
 }
 
 .card-product-infos img {
-  height: 120px;
-  width: 120px;
-  padding: 15px;
+  height: 90px;
+  width: 90px;
+  margin: 15px;
+}
+
+.card-product-infos p {
+  margin: 10px;
+  font-style: italic;
+  color: gray;
 }
 
 .card-product h3{
@@ -127,7 +139,7 @@ display: grid;
 }
 
 .card-trip-show > img {
-  height: 400px;
+  height: 325px;
   width: 100%;
   object-fit: cover;
 }
@@ -135,7 +147,7 @@ display: grid;
 .card-trip-user-show {
   position: absolute;
   right: 1000px;
-  top: 356px;
+  top: 275px;
   width: 75px;
 }
 
