@@ -6,13 +6,9 @@ class VehiculesController < ApplicationController
 
     if params[:query].present?
 
-      sql_query = "category ILIKE :query OR address ILIKE :query OR city ILIKE :query OR country ILIKE :query"
-      @vehicules = Vehicule.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = " \ vehicules.category @@ :query \ OR vehicules.title @@ :query \ OR vehicules.city @@ :query \ OR vehicules.country @@ :query "
 
-
-
-
-
+      @vehicules = Vehicule.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     end
 
     @markers = @vehicules.map do |vehicule|
