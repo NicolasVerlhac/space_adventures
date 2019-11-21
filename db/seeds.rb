@@ -9,8 +9,9 @@
 require 'open-uri'
 
 puts 'Delete vehicules and users'
-Vehicule.destroy_all
+Booking.destroy_all
 User.destroy_all
+Vehicule.destroy_all
 puts 'Deleted the users and vehicules seed'
 
 tete1 = URI.open('https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg')

@@ -41,7 +41,6 @@
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  filter: grayscale(1);
 }
 
 .card-product-infos {
@@ -142,6 +141,7 @@ display: grid;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 20px;
   margin-right: 20px;
+  background-color: #F4F4F4
 }
 
 .card-trip-show > img {
