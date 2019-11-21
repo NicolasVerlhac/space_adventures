@@ -5,7 +5,10 @@ class VehiculesController < ApplicationController
     @vehicules = policy_scope(Vehicule).order(created_at: :desc)
 
     if params[:query].present?
-      @vehicules = @vehicules.where(category: params[:query])
+
+      sql_query = " \ vehicules.category @@ :query \ OR vehicules.title @@ :query \ OR vehicules.city @@ :query \ OR vehicules.country @@ :query "
+
+      @vehicules = Vehicule.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     end
 
     @markers = @vehicules.map do |vehicule|

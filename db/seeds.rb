@@ -17,6 +17,7 @@ User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", 
 
 puts 'Created the users seed'
 
+
 # User.first.vehicules.create!(title: "Fusée Ariane", description: "Lanceur dit à deux étage et demi car il se compose d'un étage principal accolé par deux boosters.", category: "Fusée", capacity: 8, country: "France", city: "Reims", address: "10 rue de mars", daily_price: 8000.00, permit: true, availability: true)
 # User.first.vehicules.create!(title: "Super Catapulte géante", description: "le top du top", category: "Catapulte", capacity: 100, country: "France", city: "Paris", address: "23 rue du tage", daily_price: 1000000, permit: true, availability: true)
 # User.first.vehicules.create!(title: "Mortel JetPack", description: "great", category: "JetPack", capacity: 200, country: "France", city: "Paris", address: "90 rue de charonne", daily_price: 2000000, permit: true, availability: true)
