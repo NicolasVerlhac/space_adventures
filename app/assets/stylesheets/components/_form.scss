@@ -9,17 +9,19 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 20px;
   margin-right: 20px;
-  padding-top: 20px;
+  height: 325px;
 }
 
 .form-show h2 {
   font-weight: bold;
   padding-bottom: 10px;
   padding-top: 10px;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .form-show .btn-flat {
-  margin-left: 40px;
+  margin-left: 30px;
   margin-bottom: 20px;
 }
 
@@ -27,3 +29,20 @@
   padding-left: 25px;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+    margin-left: 30px;
+}
+
+.sticky-offset {
+  top: 65px;
+}
+
+.form-actions {
+  margin-left: 30px;
+}
+
+.bouton-de-merde {
+  margin-top: 15px;
+  margin-left: 30px;
+}
