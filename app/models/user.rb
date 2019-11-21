@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :bookings_as_owner, through: :vehicules, source: :bookings
 
+  has_one_attached :photo
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, uniqueness: true, presence: true

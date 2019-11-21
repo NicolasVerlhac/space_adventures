@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,11 +7,8 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
-    <div class="container col-11">
 
-
-
-
+<div class="container col-11">
   <h1 class="mt-4"> <strong><%= @vehicules.count %></strong> engins correspondent à votre recherche :</h1>
   <p class="mb-4">Classement par ordre de pertinence</p>
   <div class='d-flex'>
@@ -29,8 +26,11 @@
                 <h2><%= vehicule.title %></h2>
                 <p><%= vehicule.description %></p>
                 <p> A partir de <strong><%=vehicule.daily_price.round%>€</strong></p>
+
+
+                <%= image_tag url_for(vehicule.user.photo), class: 'card-trip-user avatar-bordered' %>
+
               </div>
-              <img src="https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg" class="card-trip-user avatar-bordered" />
             </div>
           </div>
          <% end %>
@@ -42,7 +42,9 @@
   </div>
 </div>
 
- <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+  <!-- what is this doing here ? oO -->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
     <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
