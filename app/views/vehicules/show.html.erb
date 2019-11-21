@@ -52,9 +52,38 @@
             </div>
         </div>
     </div>
-    <button name="button" type="submit" class="btn btn-flat"> Je réserve !</button>
+    <button name="button" type="submit" class="btn btn-flat" data-toggle="modal" data-target="#myModal"> Je réserve !</button>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bienvenue</h4>
+        </div>
+        <div class="modal-body">
+          <p>Votre véhicule a bien été ajouté à votre compte.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
   </div>
   <p><%= link_to 'Back to list', vehicules_path(@vehicules) %></p>
 </div>
+
+
+
+
 
 

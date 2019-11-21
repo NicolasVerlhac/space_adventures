@@ -5,8 +5,7 @@
         <h1>Publiez votre annonce</h1><br>
         <%= simple_form_for @vehicule do |f| %>
         <% config.input_mappings = { /country/ => :string }  %>
-        <%= f.input :title, label: 'Titre de votre annonce' %>
-        <%= f.input :description, label: 'Description de votre véhicule' %>
+        <%= f.input :title, label:'', placeholder: 'Titre de votre annonce' %>
         <%= f.input :category, label: 'Catégorie de véhicule', collection: [ "JetPack", "Catapulte", "X-wing", "Fusée", "Soucoupe", "Canon"] %>
         <%= f.input :capacity, label: 'Capacité' %>
         <%= f.input :country, label: 'Pays',
@@ -16,7 +15,7 @@
         <%= f.input :address, label: 'Adresse',
                       input_html: { autocomplete: "address" }%>
         <%= f.input :daily_price, label: 'Tarif journalier' %>
-        <%= f.input :permit, label: 'Permis nécessaire pour piloter le véhicule ?', collection: [ "Oui", "Non"] %>
+        <%= f.input :permit, label: 'Permis nécessaire pour piloter le véhicule ?', as: :radio_buttons, value: :inline %>
         <%= f.input :availability, label: 'Véhicule disponible ?', collection: [ "Oui", "Non"] %>
         <%= f.input :photo, as: :file %>
         <%= f.submit 'Créer mon véhicule', class:"btn btn-flat"%>
