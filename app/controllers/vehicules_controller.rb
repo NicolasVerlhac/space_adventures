@@ -36,7 +36,7 @@ class VehiculesController < ApplicationController
     authorize(@vehicule)
     @vehicule.user = current_user
     if @vehicule.save
-      redirect_to vehicule_path(@vehicule)
+      redirect_to profile_path
     else
       render :new
     end

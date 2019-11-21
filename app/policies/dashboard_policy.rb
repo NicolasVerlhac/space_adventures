@@ -8,4 +8,9 @@ class DashboardPolicy < ApplicationPolicy
   def profile?
     true
   end
+
+  def new?
+    true
+  end
+
 end
