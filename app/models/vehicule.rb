@@ -15,5 +15,5 @@ class Vehicule < ApplicationRecord
   validates :address, presence: true
   validates :daily_price, presence: true
   validates :permit, presence: true
-  validates :availability, presence: true, default: true
+  validates :availability, presence: true
 end
