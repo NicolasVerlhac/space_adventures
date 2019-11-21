@@ -8,7 +8,7 @@ const initMapBox = _ => {
 
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    style: 'mapbox://styles/nkouloukoulou/ck38s326f07zm1cpdzl3dx1nh',
     center: [-79.4512, 43.6568],
     zoom: 13
   });
@@ -25,8 +25,12 @@ const initMapBox = _ => {
     const markers = JSON.parse(mapElement.dataset.markers);
 
     markers.forEach((marker) => {
+
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
         .addTo(map);
     });
     fitMapToMarkers(map, markers);
