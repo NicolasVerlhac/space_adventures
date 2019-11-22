@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
-
+​
 <div class="container col-11">
   <h1 class="mt-4"> <strong><%= @vehicules.count %></strong> engins correspondent à votre recherche :</h1>
   <p class="mb-4">Classement par ordre de pertinence</p>
@@ -16,18 +16,20 @@
       <% @vehicules.each do |vehicule| %>
          <%= link_to vehicule_path(vehicule) do %>
           <div class="card-trip">
-
+            <% if vehicule.photo.attached? %>
+              <%= cl_image_tag vehicule.photo.key, crop: :fill %>
+            <% else %>
               <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" height="500" width="400" />
-
+            <% end %>
             <div class="card-trip-infos">
               <div>
                 <h2><%= vehicule.title %></h2>
                 <p><%= vehicule.description %></p>
                 <p> A partir de <strong><%=vehicule.daily_price.round%>€</strong></p>
-
-
-
-
+​
+​
+                <%= image_tag url_for(vehicule.user.photo), class: 'card-trip-user avatar-bordered' %>
+​
               </div>
             </div>
           </div>
@@ -39,9 +41,9 @@
     </div>
   </div>
 </div>
-
+​
   <!-- what is this doing here ? oO -->
-
+​
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
     <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
