@@ -14,15 +14,25 @@ User.destroy_all
 Vehicule.destroy_all
 puts 'Deleted the users and vehicules seed'
 
-tete1 = URI.open('https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg')
-perso1 = User.create!(email: "mumud3@gmail.com", password: "xxxxxxx", first_name: "Mumu", last_name: "Oger", phone: "01345677")
+tete1 = URI.open('https://am22.akamaized.net/tms/cnt/uploads/2017/08/leiatop1-650x574.jpg')
+perso1 = User.create!(email: "leia@gmail.com", password: "xxxxxx", first_name: "Leia", last_name: "Organa", phone: "01345677")
 perso1.photo.attach(io: tete1, filename: 'perso1.jpg', content_type: 'image/jpg')
 perso1.save
 
-tete2 = URI.open('https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
-perso2 =User.create!(email: "toto3@gmail.com", password: "xxxxxxx", first_name: "Toto", last_name: "Toto", phone: "01345788")
+tete2 = URI.open('https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/13/1490612144-luke-skywalker-thanks-c-3po-empire-strikes-back.jpg?crop=0.546xw:1.00xh;0.328xw,0&resize=480:*')
+perso2 =User.create!(email: "luke@gmail.com", password: "xxxxxx", first_name: "Luke ", last_name: "Skywalker", phone: "01345788")
 perso2.photo.attach(io: tete2, filename: 'perso2.jpg', content_type: 'image/jpg')
 perso2.save
+
+tete3 = URI.open('https://www.madametussauds.com/media/799918/_dsc9072-et-mtsyd-2012.jpg?crop=0,0.0345712965058146,0,0.187574532113356&cropmode=percentage&width=584&height=643')
+perso3 =User.create!(email: "et@gmail.com", password: "xxxxxx", first_name: "ET ", last_name: "Phone Home", phone: "013444788")
+perso3.photo.attach(io: tete3, filename: 'perso3.jpg', content_type: 'image/jpg')
+perso3.save
+
+tete4 = URI.open('https://specials-images.forbesimg.com/imageserve/1166140893/960x0.jpg?fit=scale')
+perso4 =User.create!(email: "vlad@gmail.com", password: "xxxxxx", first_name: "Vlad'", last_name: "Putin", phone: "01344478844")
+perso4.photo.attach(io: tete4, filename: 'perso4.jpg', content_type: 'image/jpg')
+perso4.save
 
 puts 'Created the users seed'
 
@@ -40,17 +50,17 @@ fusée1.photo.attach(io: file, filename: 'fusée1.jpg', content_type: 'image/jpg
 fusée1.save
 
 file2 = URI.open('https://images.unsplash.com/photo-1544942579-9671c890fe89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1172&q=80')
-fusée2 = User.first.vehicules.create!(title: "Saturn V", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 10, country: "🇺🇸 États-Unis", city: "Houston", address: "2101 E NASA Pkwy", daily_price: 9000, permit: true, availability: true)
+fusée2 = User.second.vehicules.create!(title: "Saturn V", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 10, country: "🇺🇸 États-Unis", city: "Houston", address: "2101 E NASA Pkwy", daily_price: 9000, permit: true, availability: true)
 fusée2.photo.attach(io: file2, filename: 'fusée2.jpg', content_type: 'image/jpg')
 fusée2.save
 
 file3 = URI.open('https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80')
-fusée3 = User.first.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
+fusée3 = User.third.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
 fusée3.photo.attach(io: file3, filename: 'fusée3.jpg', content_type: 'image/jpg')
 fusée3.save
 
 file4 = URI.open('https://images.unsplash.com/photo-1567416661576-659c4298a2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80')
-fusée4 = User.first.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "🇷🇺 Russie", city: "Moscou", address: "Москва, 103073", daily_price: 11000, permit: true, availability: true)
+fusée4 = User.last.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "🇷🇺 Russie", city: "Moscou", address: "Москва, 103073", daily_price: 11000, permit: true, availability: true)
 fusée4.photo.attach(io: file4, filename: 'fusée4.jpg', content_type: 'image/jpg')
 fusée4.save
 
