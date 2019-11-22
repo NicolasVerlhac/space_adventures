@@ -33,8 +33,8 @@
     <h2>🗓 Réservez <%=@vehicule.title %> </h2>
       <%= simple_form_for([ @vehicule, Booking.new]) do |form| %>
       <%= form.input :start_date, label: "Date de début", start_year: 2019 %>
-      <%= form.input :end_date, label: "Date de fin" %>
+      <%= form.input :end_date, label: "Date de fin", start_year: 2019 %>
       <%= form.button :submit, 'Je réserve !', :class => "btn btn-flat" %>
     <% end %>
   </div>
-  </div>
+</div>
