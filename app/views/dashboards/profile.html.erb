@@ -14,8 +14,14 @@
       Dates de réservation :<br>
       du <%= booking.start_date%> au <%= booking.end_date%><br><br>
       Véhicule : <%= booking.vehicule.title %><br><br>
-      Propriétaire : <%= booking.user.first_name %> <%= booking.user.last_name %>
+      Propriétaire : <%= booking.vehicule.user.first_name %> <%= booking.vehicule.user.last_name %><br>
+     <% if booking.owner_review.present?  %>
 
+      Commentaire : <%=  booking.owner_review%><br>
+      Note : <%=  booking.owner_rating%><br>
+      <% else  %>
+      <button type="button" class="btn btn-primary"><%= link_to 'Notez votre réservation ', review_edit_booking_path(booking) %>  :</button>
+      <% end  %>
     </p>
   </div>
 </div>
@@ -34,8 +40,14 @@
       Dates de réservation :<br>
       du <%= booking.start_date%> au <%= booking.end_date%><br><br>
       Véhicule : <%= booking.vehicule.title %><br><br>
-      Loué à : <%= booking.user.first_name %> <%= booking.user.last_name %>
+      Loué à : <%= booking.user.first_name %> <%= booking.user.last_name %><br>
+      <% if booking.owner_review.present?  %>
 
+      Commentaire : <%= raise %> <%=  booking.renter_review%><br>
+      Note : <%=  booking.renter_rating%><br>
+      <% else  %>
+      <button type="button" class="btn btn-primary"><%= link_to 'Notez votre réservation ', review_edit_booking_path(booking) %>  :</button>
+      <% end  %>
     </p>
   </div>
 </div>

@@ -45,12 +45,12 @@ fusée2.photo.attach(io: file2, filename: 'fusée2.jpg', content_type: 'image/jp
 fusée2.save
 
 file3 = URI.open('https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80')
-fusée3 = User.first.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
+fusée3 = User.last.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
 fusée3.photo.attach(io: file3, filename: 'fusée3.jpg', content_type: 'image/jpg')
 fusée3.save
 
 file4 = URI.open('https://images.unsplash.com/photo-1567416661576-659c4298a2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80')
-fusée4 = User.first.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "🇷🇺 Russie", city: "Moscou", address: "Москва, 103073", daily_price: 11000, permit: true, availability: true)
+fusée4 = User.last.vehicules.create!(title: "Soyuz-U2", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 4, country: "🇷🇺 Russie", city: "Moscou", address: "Москва, 103073", daily_price: 11000, permit: true, availability: true)
 fusée4.photo.attach(io: file4, filename: 'fusée4.jpg', content_type: 'image/jpg')
 fusée4.save
 
