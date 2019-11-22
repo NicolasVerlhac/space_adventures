@@ -7,9 +7,9 @@
       <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" height="500" width="400" />
       <% end %>
       <div class="card-trip-infos-show">
-        <img src="https://cdn3.vectorstock.com/i/1000x1000/50/97/space-alien-head-on-white-background-design-vector-22325097.jpg" class="card-trip-user-show avatar-bordered" />
+        <%= image_tag url_for(@vehicule.user.photo), class: 'card-trip-user avatar-bordered2' %>
         <div>
-          <h2><%= @vehicule.title %></h2>
+          <h2 class="coucou"><%= @vehicule.title %></h2>
           <h3><i><%= @vehicule.description %></i></h3>
           <h3>💸 à partir de <strong><%=@vehicule.daily_price.round%>€</strong>/jour</h3>
           <h3>👨‍✈️ équipage max : <%= @vehicule.capacity %> personnes</h3>
