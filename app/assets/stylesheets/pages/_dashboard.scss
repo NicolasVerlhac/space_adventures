@@ -1,0 +1,51 @@
+.profile-title {
+font-size: 40px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.profile-subtitle {
+  padding: 0px;
+  font-size: 25px;
+}
+
+.card-product-profile {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.card-product-profile img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-profile h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  padding :0px;
+}
+
+.card-product-profile h3 {
+  font-size: 20px;
+  margin: 0;
+  padding :0px;
+}
+
+.card-product-profile p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-profile .card-product-infos-profile {
+  padding: 16px;
+}
