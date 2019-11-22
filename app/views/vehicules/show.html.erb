@@ -7,7 +7,7 @@
       <img src="https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" height="500" width="400" />
       <% end %>
       <div class="card-trip-infos-show">
-        <%= image_tag url_for(@vehicule.user.photo), class: 'card-trip-user avatar-bordered2' %>
+        <%= cl_image_tag @vehicule.user.photo.key, class: 'card-trip-user avatar-bordered2' %>
         <div>
           <h2 class="coucou"><%= @vehicule.title %></h2>
           <h3><i><%= @vehicule.description %></i></h3>
