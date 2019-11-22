@@ -42,4 +42,12 @@ class BookingPolicy < ApplicationPolicy
   def destroy?
   record.user == user
   end
+
+  def review_edit?
+    true
+  end
+
+  def review_update?
+    true
+  end
 end

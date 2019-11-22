@@ -13,6 +13,8 @@ class DashboardsController < ApplicationController
     # => current_user vehicules
     @vehicules = current_user.vehicules
 
+
+
   end
 
 

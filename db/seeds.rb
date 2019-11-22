@@ -55,7 +55,9 @@ fusée2.photo.attach(io: file2, filename: 'fusée2.jpg', content_type: 'image/jp
 fusée2.save
 
 file3 = URI.open('https://images.unsplash.com/photo-1543599723-86e84893ebba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80')
+
 fusée3 = User.third.vehicules.create!(title: "Ariane 3", description: "Développé pour placer des satellites sur orbite géostationnaire et des charges lourdes en orbite", category: "Fusée", capacity: 6, country: "🇬🇫 Guyane", city: "Kourou", address: "Route de l'espace, 97387", daily_price: 10000, permit: true, availability: true)
+
 fusée3.photo.attach(io: file3, filename: 'fusée3.jpg', content_type: 'image/jpg')
 fusée3.save
 
