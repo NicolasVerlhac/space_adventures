@@ -8,4 +8,11 @@ Rails.application.routes.draw do
   resources :vehicules do
     resources :bookings
   end
+
+  resources :bookings do
+    member do
+      get 'review_edit'
+      patch 'review_update'
+    end
+  end
 end

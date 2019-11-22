@@ -1,0 +1,19 @@
+
+<div class="container col-10">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <div class="border p-4 m-4" id="border-form">
+        <h1>Notez votre voyage</h1><br>
+        <%= simple_form_for @booking, url: review_update_booking_path(@booking), method: :patch do |f| %>
+        <%= f.input :owner_review, label: "Votre avis", as: :text %>
+        <%= f.input :owner_rating, label: "Votre note", as: :range %>
+        <%= f.submit 'Envoyer', class:"btn btn-flat"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
