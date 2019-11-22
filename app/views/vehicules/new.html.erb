@@ -1,24 +1,23 @@
 <div class="container col-6">
-        <h1>Publiez votre annonce</h1><br>
-        <%= simple_form_for @vehicule do |f| %>
-        <% config.input_mappings = { /country/ => :string }  %>
-        <%= f.input :title, label: 'Titre de votre annonce' %>
-        <%= f.input :description, label: 'Description de votre véhicule' %>
-        <%= f.input :category, label: 'Catégorie de véhicule', collection: [ "JetPack", "Catapulte", "X-wing", "Fusée", "Soucoupe", "Canon"] %>
-        <%= f.input :capacity, label: 'Capacité' %>
-        <%= f.input :country, label: 'Pays',
-                      input_html: { autocomplete: "country" }%>
-        <%= f.input :city, label: 'Ville',
-                      input_html: { autocomplete: "city" }%>
-        <%= f.input :address, label: 'Adresse',
-                      input_html: { autocomplete: "address" }%>
-        <%= f.input :daily_price, label: 'Tarif journalier' %>
-        <%= f.input :permit, label: 'Permis nécessaire pour piloter le véhicule ?', collection: [ "Oui", "Non"] %>
-        <%= f.input :availability, label: 'Véhicule disponible ?', collection: [ "Oui", "Non"] %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit 'Créer mon véhicule', class:"btn btn-flat"%>
-        <% end %>
-
+  <h1 class="form-title">Publiez votre annonce <%=current_user.first_name%> </h1>
+    <%= simple_form_for @vehicule do |f| %>
+    <% config.input_mappings = { /country/ => :string }  %>
+    <%= f.input :title, label: 'Titre de votre annonce' %>
+    <%= f.input :description, label: 'Description de votre véhicule' %>
+    <%= f.input :category, label: 'Catégorie de votre véhicule', collection: [ "JetPack", "Catapulte", "X-wing", "Fusée", "Soucoupe", "Canon"] %>
+    <%= f.input :capacity, label: 'Capacité', collection: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"] %>
+    <%= f.input :country, label: 'Pays',
+                  input_html: { autocomplete: "country" }%>
+    <%= f.input :city, label: 'Ville',
+                  input_html: { autocomplete: "city" }%>
+    <%= f.input :address, label: 'Adresse',
+                  input_html: { autocomplete: "address" }%>
+    <%= f.input :daily_price, label: 'Tarif journalier' %>
+    <%= f.input :permit, label: 'Permis nécessaire pour piloter le véhicule ?', collection: [ "Oui", "Non"] %>
+    <%= f.input :availability, label: 'Véhicule disponible ?', collection: [ "Oui", "Non"] %>
+    <%= f.input :photo, as: :file, label: "Sélectionnez une photo de profil:" %>
+    <%= f.submit 'Créer mon véhicule', class:"btn btn-flat bouton-de-merde"%>
+  <% end %>
 </div>
 
 
