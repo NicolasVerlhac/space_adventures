@@ -29,7 +29,7 @@ perso3 =User.create!(email: "et@gmail.com", password: "xxxxxx", first_name: "ET 
 perso3.photo.attach(io: tete3, filename: 'perso3.jpg', content_type: 'image/jpg')
 perso3.save
 
-tete4 = URI.open('https://specials-images.forbesimg.com/imageserve/1166140893/960x0.jpg?fit=scale')
+tete4 = URI.open('http://welovewords.com/system/users/avatars/000/026/589/square/avatar_Mu.jpg?1464796982')
 perso4 =User.create!(email: "vlad@gmail.com", password: "xxxxxx", first_name: "Vlad'", last_name: "Putin", phone: "01344478844")
 perso4.photo.attach(io: tete4, filename: 'perso4.jpg', content_type: 'image/jpg')
 perso4.save
